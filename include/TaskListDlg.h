@@ -22,6 +22,7 @@
 #include "Sci_Position.h"
 #include "PluginDefinition.h"
 #include "../resources/resource.h"
+#include "md5.h"
 #include "PluginDefinition.h"
 #include <codecvt>
 
@@ -60,7 +61,8 @@ public :
 			concatenatedText += item.text;
 		}
 
-		return concatenatedText;
+		return getMD5(concatenatedText);
+//		return concatenatedText;
 	}
 
 	std::string todoItemsFingerprint;
